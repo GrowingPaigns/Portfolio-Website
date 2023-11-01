@@ -1,0 +1,686 @@
+
+/* Controls font and pushes background out to the edges of the screen */
+*{
+    margin: 0;
+    padding: 0;
+    /* taken from fonts.google.com */
+    font-family: 'Brandon Grotesque', sans-serif;
+}
+
+h1 {
+    font-family: 'Brandon Grotesque', sans-serif;
+}
+
+
+
+p {
+    font-family: 'Open Sans', sans-serif;
+    
+
+}
+
+a {
+    font-family: 'Brandon Grotesque', sans-serif;
+}
+
+
+
+/* used in formatting text that is in the middle of paragraphs */
+.italic-center {
+    text-align: center; /* Center the text horizontally */
+    font-style: italic; /* Italicize the text */
+    display: block; /* Make it a block-level element to center it */
+}
+
+/* used in formatting text that is in the middle of paragraphs */
+.center {
+    text-align: center; /* Center the text horizontally */
+    display: block; /* Make it a block-level element to center it */
+}
+
+.italic {
+    
+    font-style: italic; /* Italicize the text */
+}
+
+.bold {
+    font-weight: bold; /* Make the text bold */
+}
+
+
+/* Structure of the header and main page content */
+.main-page{
+    min-height: 100vh;
+    width: 100%;
+    
+    position: relative;
+    background-image: linear-gradient(rgba(4,9,30,0.2),rgba(4,9,30,0.5)),url(Images/newPlan.gif);
+    background-position: center;
+    background-size: cover;
+}
+
+/* Controls logo size */
+.main-page img{
+    width: 26vh;
+    padding: 2% 2%;
+}
+
+.page-nav {
+    margin-left: 38%;
+    margin-right: 38%;
+    margin-bottom: 3%;
+    position: relative;
+   
+    background-color: #f44336; /* Horizontal pill background color */
+    border-radius: 25px; /* Half of the width for border-radius makes it pill-shaped */
+    padding: 0; /* Set padding to 0 to eliminate extra space inside the container */
+    z-index: 3;
+    
+     display: flex;
+    flex-direction: row; /* Make the dots horizontally aligned */
+    justify-content: center;
+    align-content: center;
+    align-items: center;
+}
+
+.dot {
+    width: 20px;
+    height: 20px;
+    background-color: grey;
+    border-radius: 50%; /* Circular dots */
+    cursor: pointer;
+    margin: 5px;
+    display: flex;
+    
+}
+
+
+/* Style for the active dot (white) */
+.active-dot {
+    background-color: white;
+}
+
+
+
+
+/* Existing styles above */
+
+.about-me {
+    position: relative;
+    z-index: 1; /* Ensure it appears above text-holder */
+    width: 100%;
+    
+    flex-direction: column;
+    text-align: center;
+    align-items: center;
+}
+
+/* Additional styles for content inside the about-me section */
+.about-me-header {
+  background-image: linear-gradient(rgba(4,9,30,0.7),rgba(4,9,30,0.7)), url(Images/RLHeaderGif.gif);
+  background-position: center;
+  background-size: fill;
+  height: 20vh;
+  text-align: center;
+  align-items: center;
+  display: flex; /* Add this to use flexbox */
+  justify-content: center; /* Center horizontally */
+  flex-direction: column; /* Stack items vertically */
+  border: 1px solid;
+  border-color: rgba(235,235,235,0.5);
+}
+
+.about-me h1 {
+  color: #fff; /* Text color */
+  font-size: 28px; /* Adjust the font size as needed */
+  margin: 0; /* Remove default margin */
+  margin-left: 25px;
+}
+
+.about-me p {
+  font-size: 16px; /* Adjust the font size as needed */
+  color: #fff; /* Text color */
+}
+
+.about-me-textbox h2 {
+    padding-top: 20px;
+    padding-bottom: 8px;
+    color: #fff; /* Text color */
+    margin-left: 32.5%;
+}
+
+.about-me-textbox p {
+    padding: 10px;
+    text-align: left; 
+    margin-left: 38%;
+    margin-right: 7%;
+    padding-bottom: 70px;
+}
+
+
+/* ------------------------- */
+
+.content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center; /* Center items vertically */
+    
+    padding-bottom: 5%;
+}
+
+.text-holder {
+    width: 45%;
+    margin-right:5%;
+    text-align: center;
+    margin-left: 42.5%;
+    margin-top: 8%;
+    transition: opacity 1s, transform 0.5s;
+    opacity: 1;
+    z-index: 1; 
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    /* Add the following styles to center the content */
+    height: 100%; /* Set the height to 100% to occupy the entire height of the box */
+    background-color: rgba(0,0,0,0.4); /* Change to white on hover */
+    border-radius: 10px;
+}
+
+.text-holder h1 {
+    font-size: 46.5px;
+    color: rgb(235, 235, 235);
+}
+
+.text-holder p {
+    font-size: 17.5px;
+    color: rgb(235, 235, 235);
+}
+
+
+
+.contact-text {
+    padding-top: 5%;
+    margin: auto;
+    padding-bottom: 10%;
+    transition: transform 0.5s, opacity 0.5s; /* Add transition for both transform and opacity */
+    color: rgb(235, 235, 235);
+}
+
+/* Reset initial state for contact-text */
+#contactText {
+    transition: transform 0.5s, opacity 0.5s; /* Apply transitions */
+    opacity: 1;
+}
+
+#welcomeHeader,
+#welcomeText {
+    transition: transform 0.5s, opacity 0.5s;
+    opacity: 1;
+    transform: translateX(0); /* Initial position */
+    
+}
+
+#welcomeHeader {
+    padding-bottom: 20px;
+}
+
+
+/* Reset initial state for vrHeader and vrText */
+#vrHeader,
+#vrSumHeader {
+    display: none;
+    opacity: 0;
+    transition: transform 0.5s, opacity 0.5s; /* Apply transitions */
+    transform: translateX(-100%); /* Initial position */
+    color: rgb(235, 235, 235);
+    text-align: center; 
+    position: relative;
+   
+}
+
+#vrText,
+#vrSummary {
+    display: none;
+    opacity: 0;
+    transition: transform 0.5s, opacity 0.5s; /* Apply transitions */
+    transform: translateX(-100%); /* Initial position */
+    color: rgb(235, 235, 235);
+    text-align: left; 
+    position: relative;
+   
+}
+
+#vrVid,
+#rlVid,
+#rlVid2,
+#rlVid3,
+#iotVid,
+#webVid {
+    z-index: 3;
+    transition: transform 0.5s, opacity 0.5s; /* Apply transitions */
+}
+
+#rlHeader,
+#rlText,
+#rlHeader2,
+#rlText2,
+#rlText3 {
+    opacity: 0;
+    transition: transform 0.5s, opacity 0.5s; /* Apply transitions */
+    transform: translateX(-100%); /* Initial position */
+    color: rgb(235, 235, 235);
+}
+
+#rlText,
+#rlText2,
+#rlText3 {
+    text-align: left; 
+    padding-left: 20px;
+    padding-right: 20px;
+}
+
+
+#iotHeader,
+#iotText,
+#iotHeader2,
+#iotText2,
+#iotHeader3,
+#iotText3 {
+    opacity: 0;
+    transition: transform 0.5s, opacity 0.5s; /* Apply transitions */
+    transform: translateX(-100%); /* Initial position */
+    color: rgb(235, 235, 235);
+}
+
+#iotTable {
+    opacity: 0;
+    transition: transform 0.5s, opacity 0.5s; /* Apply transitions */
+    transform: translateX(-100%); /* Initial position */
+    color: rgb(235, 235, 235);
+    border: 1px solid;
+    border-color: rgb(235, 235, 235);
+    
+    text-align: left; 
+    padding: 5px; 
+}
+
+#iotTable td:first-child {
+    text-align: right; /* Align text in the first column to the right */
+}
+
+#iotTable td + td {
+    border-left: 10px solid transparent; /* Add left border to the second column for spacing (adjust width as needed) */
+}
+
+#iotText,
+#iotText2,
+#iotText3 {
+    text-align: left; 
+    padding-left: 20px;
+    padding-right: 20px;
+}
+
+
+
+#webHeader,
+#webText,
+#webText2 {
+    opacity: 0;
+    transition: transform 0.5s, opacity 0.5s; /* Apply transitions */
+    transform: translateX(-100%); /* Initial position */
+    color: rgb(235, 235, 235);
+}
+
+#webText,
+#webText2 {
+    text-align: left; /* Center-align text */
+    padding-left: 20px;
+    padding-right: 20px;
+}
+
+#vrIcons,
+#rlIcons,
+#iotIcons,
+#webIcons {
+    display: none;
+    transition: transform 0.5s, opacity 0.5s; /* Apply transitions */
+    transform: translateX(-100%); /* Initial position */
+    opacity: 0;
+}
+
+#internHeader,
+#internText,
+#internText2,
+#internText3,
+#internText4,
+#internText5 {
+    display: none;
+    opacity: 0;
+    transition: transform 0.5s, opacity 0.5s; /* Apply transitions */
+    transform: translateX(-100%); /* Initial position */
+    color: rgb(235, 235, 235);
+}
+
+#internHeader {
+    padding-bottom: 20px;
+}
+
+#internText,
+#internText2,
+#internText3,
+#internText4,
+#internText5 {
+    text-align: left; /* Center-align text */
+    padding-left: 20px;
+    padding-right: 20px;
+}
+
+#imageContainer,
+#imageContainer2,
+#imageContainer3,
+#imageContainer4, 
+#imageContainer5 {
+    transition: transform 0.5s, opacity 0.5s; /* Apply transitions */
+    display: none;
+    transform: translateX(-100%); /* Initial position */=
+
+}
+
+.image-container {
+    display: flex; /* Make the containers inline */
+    flex-direction: row; /* Arrange them side by side */
+    align-content: space-between;
+}
+
+.image-container img {
+    padding: 10px; /* Add padding between the images */
+    margin-top: 10px;
+    width: 360px; /* Set the dimensions you want for the images */
+    height: 270px;
+}
+/*---------------------------------------*/
+/* Style the GitHub button */
+.github-btn {
+    display: flex;
+    align-items: center;
+    background: transparent; /* Set background to transparent */
+    color: #f44336;
+    font-size: 16px; /* Adjust the font size as needed */
+    border: 2px solid #f44336; /* Add a 2px solid outline with #f44336 color */
+    padding: 12px;
+    border-radius: 30px; /* Make the button circular */
+    cursor: pointer;
+    transition: background 0.3s ease, transform 0.2s ease, color 0.3s ease, border 0.3s ease; /* Add color transition */
+    text-decoration: none;
+    margin: auto;
+    position: fixed; /* Set position to fixed */
+    top: 20px; /* Adjust the distance from the bottom as needed */
+    right: 20px; /* Adjust the distance from the right as needed */
+    z-index: 9999; /* Ensure the button appears above other content */
+    overflow: hidden;
+}
+
+/* Style the SVG logo inside the button */
+/*
+.github-btn svg {
+    padding-right: 10px;  Adjust the padding as needed 
+}
+*/
+
+
+.github-btn:hover {
+    background-color: rgba(150, 30, 30, 0.5); /* Change background to transparent on hover */
+    border-color: rgba(150, 30, 30, 0.7); /* Change button outline color to transparent on hover */
+    transform: scale(1.07); /* Add a slight scale effect on hover */
+}
+
+/* Remove the purple underline on hover */
+.github-link a {
+    text-decoration: none;
+}
+
+/*----------------------------*/
+
+
+
+.text-box p2 {
+    font-size: 17.5px;
+}
+
+.hero-btn{
+    display: inline-block;
+    text-decoration: none;
+    color: rgb(240, 240, 240);
+    border: 1px solid rgb(240, 240, 240);
+    padding: 12px 34px;
+    font-size: 13px;
+    background: transparent;
+    position: relative;
+    cursor: pointer;
+}
+.hero-btn:hover{
+    border: 1px solid #f44336;
+    background: #f44336;
+    transition: 1s;
+    
+}
+
+
+
+/* ---------------------------- */
+
+.column-holder {
+    position: fixed; /* Set position to fixed */
+    top: 50%; /* Adjust the vertical position as needed */
+    margin-left: 8%; /* Place it at the right edge of the screen */
+    transform: translateY(-50%); /* Center vertically */
+    display: flex;
+    flex-direction: column;
+    width: 300px; /* Adjust the width as needed */
+    z-index: 2; /* Ensure it appears above other content */
+    height: 80%;
+    
+}
+
+.project-columns {
+    height: 33.33%; /* Each column takes up 1/3 of the parent's height */
+    width: 100%;
+    margin-bottom: 10px;
+    position: relative;
+    overflow: hidden;
+    transition: transform 0.5s;
+    border-radius: 40px;
+}
+
+.project-columns::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    border: 2px solid transparent; /* Start with a transparent border */
+    border-radius: inherit;
+    opacity: 0; /* Start with opacity 0 */
+    transition: opacity 0.5s, border-color 0.5s; /* Apply transitions */
+}
+
+.project-columns.small {
+  /* Remove the transform property */
+  transition: transform 0.3s ease; /* Keep the transition property for a smooth effect */
+}
+
+.project-columns:hover {
+  z-index: 0; /* Bring the hovered column to the front */
+  transform: scale(1); /* Enlarge the hovered column */
+  border-radius: 40px;
+}
+
+.project-columns:hover::before {
+    opacity: 1; /* Fade in the pseudo-element */
+    border-right-color: rgb(195, 195, 195); /* Change the border color on hover */
+    border-bottom-color: rgb(195, 195, 195); /* Change the border color on hover */
+    
+}
+
+/* Set the dimensions of videos/gifs to fill their containers and center them */
+.project-columns video {
+    width: 100%; /* Ensure equal width for both images and videos */
+    height: 100%; /* Ensure equal height for both images and videos */
+    display: flex;
+    object-fit: cover; /* Fill the container while preserving aspect ratio */
+    border-radius: 40px; /* Apply border-radius to make them rounded */
+    
+}
+
+.layer {
+    background: transparent;
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    transition: 0.5s;
+}
+
+.layer:hover {
+    z-index: 2;
+    background: rgba(226, 0, 0, 0.4);
+    
+}
+
+.layer h3 {
+    width: calc(100% - 20px); /* Adjust the padding value (20px) as needed */
+    font-weight: 500;
+    color: rgb(240, 240, 240);
+    font-size: 26px;
+    top: 50%;
+    position: relative;
+    opacity: 0;
+    transition: 0.5s;
+    text-align: center;
+    padding: 0 10px; /* Add left and right padding */
+    transform: translate(0, -80%); /* Center both horizontally and vertically */
+}
+
+.layer:hover h3 {
+    opacity: 1;
+    margin: auto;
+    
+    transform: translate(0, -45%); /* Center both horizontally and vertically */
+}
+/* ------------------------mobile menu display---------------------------- */
+
+nav .fa{
+    display: none;
+}
+
+
+.icons .fa{
+    color: #f44336;
+    margin: 0 13px;
+    cursor: pointer;
+    padding: 18px 0;
+    transform: scale(1.3)
+}
+
+.icons .fab{
+    color: #f44336;
+    margin: 0 13px;
+    cursor: pointer;
+    padding: 18px 0;
+    transform: scale(1.3);
+    
+}
+
+
+
+/* Scale icons on hover */
+.icon-scale {
+    transition: transform 0.5s; /* Add a smooth transition effect */
+}
+
+.icon-scale:hover {
+    transform: scale(1.8); /* Scale the icon to 110% of its original size on hover */
+}
+
+@media (max-width: 1310px) {
+    .column-holder {
+        position: fixed; /* Set position to fixed */
+        top: 50%; /* Adjust the vertical position as needed */
+        margin-left: 3%; /* Place it at the right edge of the screen */
+        transform: translateY(-50%); /* Center vertically */
+        display: flex;
+        flex-direction: column;
+        width: 300px; /* Adjust the width as needed */
+        z-index: 2; /* Ensure it appears above other content */
+        height: 80%;
+    
+   }
+}
+
+@media (max-width: 875px) {
+    .column-holder {
+        position: fixed; /* Set position to fixed */
+        top: 50%; /* Adjust the vertical position as needed */
+        margin-left: 4%; /* Place it at the right edge of the screen */
+        transform: translateY(-50%); /* Center vertically */
+        display: flex;
+        flex-direction: column;
+        width: 230px; /* Adjust the width as needed */
+        z-index: 2; /* Ensure it appears above other content */
+        height: 80%;
+    
+   }
+    
+    .content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center; /* Center items vertically */
+    
+    padding-bottom: 5%;
+    }
+
+
+    #vrSummary {
+        width:90% ;
+        padding-right: 20px;
+    }
+    
+    .text-holder {
+        width: 45%;
+        text-align: center;
+        margin-left: 45%;
+        margin-top: 8%;
+        transition: opacity 1s, transform 0.5s;
+        opacity: 1;
+        z-index: 1; 
+        position: relative;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        /* Add the following styles to center the content */
+        height: 100%; /* Set the height to 100% to occupy the entire height of the box */
+        background-color: rgba(0,0,0,0.4); /* Change to white on hover */
+        border-radius: 10px;
+    }
+}
+/*.fa-heart-o {
+    color: #f44336;
+    transition: transform 0.7s; /* Add a smooth hover-exit transition effect for scaling 
+}
+
+/* Scale and color for the heart icon *//*
+.fa-heart-o:hover {
+    transform: scale(1.3); /* Increase the size on hover 
+    transition: transform 0.7s; /* Add a smooth transition effect 
+}
+
+
+.heart-icon-fill {
+    background-color: red; /* Change the color to indicate a filled heart 
+}
+*/
