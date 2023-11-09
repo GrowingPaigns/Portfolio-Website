@@ -97,8 +97,6 @@
 
             </div>
 
-
-
             <div class="text-holder" id="textHolder">
                 <h1 id="welcomeHeader">Welcome Visitor!</h1>
                 <p id="welcomeText">Thank you for taking the time to check out my website! To the left are some projects I wanted to specifically showcase, they range from web pages, to games, to physical systems. Click any of them to learn more about what I'm working on!
@@ -107,9 +105,6 @@
 
                     Navigate around the site to find out more about my personal background and professional career in the "About Me" section below.
                 </p>
-
-
-
 
                 <h1 id="vrHeader">A Different Perspective On Illusions</h1>
                 <div class="icons" id="vrIcons">
@@ -135,7 +130,7 @@
 
                 <div class="video-container">
                     <video width="100%" height="420px" controls id="vrVid">
-                        <source src="Images/Videos/VRShowcase.mp4">
+                        <source src="Images/Videos/VRShowcase.mp4" loading="lazy">
                     </video>
                 </div>
 
@@ -194,7 +189,7 @@
 
                 <div class="video-container">
                     <video width="100%" height="420px" controls id="rlVid">
-                        <source src="Images/Videos/RLDemo.mp4">
+                        <source src="Images/Videos/RLDemo.mp4" loading="lazy">
                     </video>
                 </div>
 
@@ -205,7 +200,7 @@
 
                 <div class="video-container">
                     <video width="100%" height="420px" controls id="rlVid2">
-                        <source src="Images/Videos/RLMainMenu.mp4">
+                        <source src="Images/Videos/RLMainMenu.mp4" loading="lazy">
                     </video>
                 </div>
 
@@ -214,7 +209,7 @@
                 </h2>
 
                 <p id="rlText3">
-                    <br>When starting this project, I had some surface level experience with Unity 2D/3D and generally how physics worked while using in-engine "components". What I didn't know is that Unity's built-in physics components are <span class="italic">dog water</span> at handling interactions when it comes to slightly more complex terrain like <span class="italic">ramps (or when trying to link multiple player controls together - such as wall jumps, and sliding)</span>.<br><br> 
+                    <br>When starting this project, I had some surface level experience with Unity 2D/3D and generally how physics worked while using in-engine "components". What I didn't know is that Unity's built-in physics components are <span class="italic">dog water</span> at handling interactions when it comes to slightly more complex terrain like <span class="italic">ramps (or when trying to link multiple player controls together - such as wall jumps, and sliding)</span>.<br><br>
 
                     Thankfully, our lord and savior, <span class="italic"><a href="https://www.youtube.com/c/SebastianLague">Sebastian Lague</a></span>, created an incredibly comprehensive, and professionally programmed tutorial series on just this issue, and how to set up an entire custom <span class="italic"><a href="https://www.youtube.com/watch?v=MbWK8bCAU2w">2D Platformer Physics System</a></span> in Unity. While this tutorial is nearing 8 years old, it is still one of the only released tutorials that covers this topic, and thereby, deserves this mention <span class="italic">(at the very least)</span>.
 
@@ -244,7 +239,7 @@
 
                 <div class="video-container">
                     <video width="100%" height="420px" controls id="iotVid">
-                        <source src="Images/Videos/SpaceInvadersGame.mp4">
+                        <source src="Images/Videos/SpaceInvadersGame.mp4" loading="lazy">
                     </video>
                 </div>
 
@@ -331,8 +326,8 @@
                     </span>
                 </p>
                 <div class="image-container" id="imageContainer">
-                    <img src="Images/whitelisted.PNG">
-                    <img src="Images/navWarn.png">
+                    <img src="Images/whitelisted.PNG" loading="lazy">
+                    <img src="Images/navWarn.png" loading="lazy">
                 </div>
                 <p id="internText2">
                     <span class="italic"><br><br>An <span class="bold">unlisted</span> URL simply gets underlined, but remains white in color, and cannot be interacted with.
@@ -340,7 +335,7 @@
                 </p>
 
                 <div class="image-container" id="imageContainer2">
-                    <img src="Images/unwhitelisted.PNG">
+                    <img src="Images/unwhitelisted.PNG" loading="lazy">
                 </div>
 
                 <p id="internText3">
@@ -349,7 +344,7 @@
                 </p>
 
                 <div class="image-container" id="imageContainer3">
-                    <img src="Images/blacklisted.PNG">
+                    <img src="Images/blacklisted.PNG" loading="lazy">
                 </div>
 
                 <p id="internText4">
@@ -357,9 +352,9 @@
                 </p>
 
                 <div class="image-container" id="imageContainer4">
-                    <img src="Images/catlink.PNG">
-                    <img src="Images/spam.PNG">
-                    <img src="Images/wordcount.PNG">
+                    <img src="Images/catlink.PNG" loading="lazy">
+                    <img src="Images/spam.PNG" loading="lazy">
+                    <img src="Images/wordcount.PNG" loading="lazy">
                 </div>
 
                 <p id="internText5">
@@ -367,11 +362,11 @@
                 </p>
 
                 <div class="image-container" id="imageContainer5">
-                    <img src="Images/mountains1.PNG">
-                    <img src="Images/castle1.PNG">
-                    <img src="Images/nomad1.PNG">
-                    <img src="Images/nomad2.PNG">
-                    <img src="Images/nomad3.PNG">
+                    <img src="Images/mountains1.PNG" loading="lazy">
+                    <img src="Images/castle1.PNG" loading="lazy">
+                    <img src="Images/nomad1.PNG" loading="lazy">
+                    <img src="Images/nomad2.PNG" loading="lazy">
+                    <img src="Images/nomad3.PNG" loading="lazy">
                 </div>
 
 
@@ -401,13 +396,6 @@
 
 
             </div>
-
-            <!--
-            
--->
-
-
-
 
             <div class="github-link">
                 <a href="https://github.com/GrowingPaigns">
@@ -474,74 +462,12 @@
             const welcomeText = document.getElementById("welcomeText");
 
             const projectSections = {
-                vr: {
-                    header: document.getElementById("vrHeader"),
-                    text: document.getElementById("vrText"),
-                    summaryHeader: document.getElementById("vrSumHeader"),
-                    summary: document.getElementById("vrSummary"),
-                    vid: document.getElementById("vrVid"),
-                    icons: document.getElementById("vrIcons"),
-                },
-                rl: {
-                    header: document.getElementById("rlHeader"),
-                    text: document.getElementById("rlText"),
-                    header2: document.getElementById("rlHeader2"),
-                    text2: document.getElementById("rlText2"),
-                    text3: document.getElementById("rlText3"),
-                    vid: document.getElementById("rlVid"),
-                    vid2: document.getElementById("rlVid2"),
-                    vid3: document.getElementById("rlVid3"),
-                    icons: document.getElementById("rlIcons"),
-                },
-                iot: {
-                    header: document.getElementById("iotHeader"),
-                    text: document.getElementById("iotText"),
-                    header2: document.getElementById("iotHeader2"),
-                    text2: document.getElementById("iotText2"),
-                    header3: document.getElementById("iotHeader3"),
-                    text3: document.getElementById("iotText3"),
-                    vid: document.getElementById("iotVid"),
-                    table: document.getElementById("iotTable"),
-                    icons: document.getElementById("iotIcons"),
-                },
-                web: {
-                    header: document.getElementById("webHeader"),
-                    text: document.getElementById("webText"),
-                    text2: document.getElementById("webText2"),
-                    icons: document.getElementById("webIcons"),
-                    icons2: document.getElementById("webIcons2"),
-                },
-                intern: {
-                    header: document.getElementById("internHeader"),
-                    text: document.getElementById("internText"),
-                    text2: document.getElementById("internText2"),
-                    text3: document.getElementById("internText3"),
-                    text4: document.getElementById("internText4"),
-                    text5: document.getElementById("internText5"),
-                    imageContainer: document.getElementById("imageContainer"),
-                    imageContainer2: document.getElementById("imageContainer2"),
-                    imageContainer3: document.getElementById("imageContainer3"),
-                    imageContainer4: document.getElementById("imageContainer4"),
-                    imageContainer5: document.getElementById("imageContainer5"),
-
-                },
+                vr: document.querySelectorAll("#vrHeader, #vrText, #vrSumHeader, #vrSummary, #vrVid, #vrIcons"),
+                rl: document.querySelectorAll("#rlHeader, #rlText, #rlHeader2, #rlText2, #rlText3, #rlVid, #rlVid2, #rlVid3, #rlIcons"),
+                iot: document.querySelectorAll("#iotHeader, #iotText, #iotHeader2, #iotText2, #iotHeader3, #iotText3, #iotVid, #iotTable, #iotIcons"),
+                web: document.querySelectorAll("#webHeader, #webText, #webText2, #webIcons, #webIcons2"),
+                intern: document.querySelectorAll("#internHeader, #internText, #internText2, #internText3, #internText4, #internText5, #imageContainer, #imageContainer2, #imageContainer3, #imageContainer4, #imageContainer5")
             };
-
-            const contactText = document.getElementById("contactText");
-
-
-            let isProjOpen = false;
-
-            let isVROpen = false;
-            let isRLOpen = false;
-            let isIOTOpen = false;
-            let isWebOpen = false;
-            let isInternOpen = false;
-
-            let welcomeDisplayOpen = true;
-
-            let clickedLayer = "";
-            let lastClickedLayer = "";
 
             // Get all project columns
             const projectColumns = document.querySelectorAll('.project-columns');
@@ -553,13 +479,24 @@
             // Get the dots
             const topDot = document.getElementById("topDot");
             const aboutMeDot = document.getElementById("aboutMeDot");
+            const contactText = document.getElementById("contactText");
+
+            let isProjOpen = false;
+            let isVROpen = false;
+            let isRLOpen = false;
+            let isIOTOpen = false;
+            let isWebOpen = false;
+            let isInternOpen = false;
+
             let enableScrollEvent = true;
+            let welcomeDisplayOpen = true;
+
+            let clickedLayer = "";
+            let lastClickedLayer = "";
 
             topDot.classList.add("active-dot");
 
             function disableScrollEvent() {
-                enableScrollEvent = false;
-
                 // After a reasonable delay, re-enable the scroll event
                 setTimeout(() => {
                     enableScrollEvent = true;
@@ -571,82 +508,37 @@
                     return; // Exit the function if scrolling is disabled
                 }
 
-                const topSection = document.querySelector(".main-page");
-                const aboutMeSection = document.querySelector(".about-me");
-                const topDot = document.getElementById("topDot");
-                const aboutMeDot = document.getElementById("aboutMeDot");
-
                 const topSectionRect = topSection.getBoundingClientRect();
                 const aboutMeSectionRect = aboutMeSection.getBoundingClientRect();
 
                 if (topSectionRect.top <= 0 && aboutMeSectionRect.top > 500) {
-                    // Top section is in view
                     topDot.classList.add("active-dot");
                     aboutMeDot.classList.remove("active-dot");
                 } else if (aboutMeSectionRect.top <= 500) {
-                    // About Me section is in view
                     topDot.classList.remove("active-dot");
                     aboutMeDot.classList.add("active-dot");
                 }
             }
 
             // Add click event listeners to the dots
-            topDot.addEventListener("click", function() {
-                // Scroll to the top of the page
-                topSection.scrollIntoView({
-                    behavior: "smooth"
-                });
-                disableScrollEvent();
-
-                // Highlight the clicked dot
-                topDot.classList.add("active-dot");
-                aboutMeDot.classList.remove("active-dot");
-            });
-
-            aboutMeDot.addEventListener("click", function() {
-                // Scroll to the about-me section
-                aboutMeSection.scrollIntoView({
-                    behavior: "smooth"
-                });
-                disableScrollEvent();
-
-                // Highlight the clicked dot
-                aboutMeDot.classList.add("active-dot");
-                topDot.classList.remove("active-dot");
-            });
-
-
-
-
+            topDot.addEventListener("click", scrollToSection.bind(null, topSection));
+            aboutMeDot.addEventListener("click", scrollToSection.bind(null, aboutMeSection));
 
             // Listen to scroll events to update the active dot on scroll
             window.addEventListener("scroll", updateActiveDot);
 
-
-
+            function scrollToSection(section) {
+                section.scrollIntoView({
+                    behavior: "smooth"
+                });
+                disableScrollEvent();
+            }
 
             // Loop through each project column
             projectColumns.forEach((column, index) => {
-                // Add a mouseenter event listener
-                column.addEventListener('mouseenter', () => {
-                    // Apply the .small class to columns on both sides
-                    for (let i = 0; i < projectColumns.length; i++) {
-                        if (i !== index) { // Calculate the scale factor based on the distance from the hovered column const 
-                            scaleFactor = Math.abs(i - index) * 0.1; // Adjust the factor as needed // Apply the .small class with the calculated scale factor 
-                            projectColumns[i].classList.add('small');
-                            projectColumns[i].style.transform = `scale(${1 - scaleFactor})`;
-                        }
-                    }
-                }); // Add a mouseleave event listener to reset the columns to their original size 
-                column.addEventListener('mouseleave', () => {
-                    // Remove the .small class and reset the transform property
-                    projectColumns.forEach((col, idx) => {
-                        col.classList.remove('small');
-                        col.style.transform = 'scale(1)';
-                    });
-                });
+                column.addEventListener('mouseenter', handleColumnHover.bind(null, index));
+                column.addEventListener('mouseleave', resetColumns);
             });
-
 
             function scrollToTop() {
                 topSection.scrollIntoView({
@@ -654,21 +546,22 @@
                 });
             }
 
-            /*// Get the heart icon element
-            const heartIcon = document.querySelector('.heart-icon i');
+            function handleColumnHover(index) {
+                projectColumns.forEach((col, i) => {
+                    if (i !== index) {
+                        const scaleFactor = Math.abs(i - index) * 0.1;
+                        col.classList.add('small');
+                        col.style.transform = `scale(${1 - scaleFactor})`;
+                    }
+                });
+            }
 
-            // Add a click event listener to the heart icon
-            heartIcon.addEventListener('click', function() {
-                if (heartIcon.classList.contains('fa-heart-o')) {
-                    // If it's currently empty, fill it
-                    heartIcon.classList.remove('fa-heart-o');
-                    heartIcon.classList.add('fa-heart');
-                } else {
-                    // If it's currently filled, empty it
-                    heartIcon.classList.remove('fa-heart');
-                    heartIcon.classList.add('fa-heart-o');
-                }
-            });*/
+            function resetColumns() {
+                projectColumns.forEach((col) => {
+                    col.classList.remove('small');
+                    col.style.transform = 'scale(1)';
+                });
+            }
 
             // Function to gradually increase opacity
             function fadeInElement(...elements) {
@@ -688,39 +581,109 @@
                 }, 10); // Adjust the interval duration as needed
             }
 
-            // Function to gradually decrease opacity
-            function fadeOutText(...elements) {
-                let opacity = 1;
-                const interval = setInterval(function() {
-                    if (opacity <= 0) {
-                        clearInterval(interval);
-                    } else {
-                        opacity -= 0.1; // Adjust the increment value as needed
-                        elements.forEach((element) => {
-                            if (element) {
-                                element.style.opacity = opacity;
-                                element.style.display = "none";
+            function toggleProjectSections(projectSection, isOpen) {
+                if (projectSection) {
+                    
+                    projectSection.forEach((element) => {
+                        if (element) {
+                            element.style.transform = isOpen ? "translateX(0)" : "translateX(-100%)";
+                            if (isOpen) {
+                                element.style.display = isOpen ? "block" : "none";
+                                fadeInElement(element);
+                            } else {
+                                element.style.opacity = "0";
+                                setTimeout(function() {
+                                    element.style.display = isOpen ? "block" : "none";
+                                }, 500);
                             }
-                        });
+
+
+                        }
+                    });
+                }
+            }
+
+            function handleLayerClick(layerName) {
+
+                const sectionToToggle = {
+                    "VRLayer": projectSections.vr,
+                    "RLLayer": projectSections.rl,
+                    "IOTLayer": projectSections.iot,
+                    "WEBLayer": projectSections.web,
+                    "INTERNLayer": projectSections.intern,
+                };
+
+                if (!isProjOpen) {
+                    // Animate welcomeHeader and welcomeText to slide left and become opaque
+                    welcomeHeader.style.transform = "translateX(-100%)";
+                    welcomeText.style.transform = "translateX(-100%)";
+                    welcomeHeader.style.opacity = "0";
+                    welcomeText.style.opacity = "0";
+                    welcomeDisplayOpen = false;
+
+                    contactText.style.transform = "translateX(-100%)";
+                    contactText.style.opacity = "0";
+                    setTimeout(function() {
+
+                        welcomeHeader.style.display = welcomeDisplayOpen ? "block" : "none";
+                        welcomeText.style.display = welcomeDisplayOpen ? "block" : "none";
+                        contactText.style.display = welcomeDisplayOpen ? "block" : "none";
+                        toggleProjectSections(sectionToToggle[layerName], true);
+                        contactText.style.transform = "translateX(0%)";
+                        contactText.style.opacity = "1";
+                        fadeInElement(contactText);
+                        isProjOpen = !isProjOpen;
+                        lastClickedLayer = layerName;
+                    }, 500);
+                } else if (isProjOpen) {
+                    if (layerName != lastClickedLayer) {
+
+                        welcomeDisplayOpen = false;
+
+                        toggleProjectSections(sectionToToggle[lastClickedLayer], false);
+
+                        setTimeout(function() {
+                            toggleProjectSections(sectionToToggle[layerName], true);
+
+                            lastClickedLayer = layerName;
+                            fadeInElement(contactText);
+                        }, 500);
+                    } else if (layerName == lastClickedLayer) {
+                        toggleProjectSections(sectionToToggle[layerName], false);
+                        isProjOpen = !isProjOpen;
+                        contactText.style.transform = "translateX(-100%)";
+
+                        // Delay before resetting welcomeHeader and welcomeText
+                        setTimeout(function() {
+                            
+                            welcomeDisplayOpen = true;
+                            welcomeHeader.style.display = welcomeDisplayOpen ? "block" : "none";
+                            welcomeText.style.display = welcomeDisplayOpen ? "block" : "none";
+                            contactText.style.display = welcomeDisplayOpen ? "block" : "none";
+                            
+                            // Reset welcomeHeader and welcomeText to their initial state
+                            welcomeHeader.style.transform = "translateX(0%)";
+                            welcomeText.style.transform = "translateX(0%)";
+                            contactText.style.transform = "translateX(0%)";
+
+                            fadeInElement(contactText, welcomeHeader, welcomeText);
+ 
+
+                        }, 500); // Adjust this timeout as needed
                     }
-                }, 10); // Adjust the interval duration as needed
+                }
             }
 
             // Initialize the display properties based on the initial state
-            for (const element in projectSections.vr)
-                projectSections.vr[element].style.display = isVROpen ? "block" : "none";
-            for (const element in projectSections.rl)
-                projectSections.rl[element].style.display = isRLOpen ? "block" : "none";
-            for (const element in projectSections.iot)
-                projectSections.iot[element].style.display = isIOTOpen ? "block" : "none";
-            for (const element in projectSections.web)
-                projectSections.web[element].style.display = isWebOpen ? "block" : "none";
-            for (const element in projectSections.intern)
-                projectSections.intern[element].style.display = isInternOpen ? "block" : "none";
-
+            toggleProjectSections(projectSections.vr, isVROpen)
+            toggleProjectSections(projectSections.rl, isRLOpen)
+            toggleProjectSections(projectSections.iot, isIOTOpen)
+            toggleProjectSections(projectSections.web, isWebOpen)
+            toggleProjectSections(projectSections.intern, isInternOpen)
 
             welcomeHeader.style.display = welcomeDisplayOpen ? "block" : "none";
             welcomeText.style.display = welcomeDisplayOpen ? "block" : "none";
+
 
             for (let i = 0; i < layers.length; i++) {
                 layers[i].addEventListener("click", function() {
@@ -732,240 +695,43 @@
                     scrollToTop();
 
 
-                    if (layerName.includes("VRLayer")) {
+                    switch (layerName) {
+                    case "VRLayer":
                         isVROpen = !isVROpen;
-                        isRLOpen = false;
-                        isIOTOpen = false;
-                        isWebOpen = false;
-                        isInternOpen = false;
-                    } else if (layerName.includes("RLLayer")) {
-                        isVROpen = false;
+                        break;
+                    case "RLLayer":
                         isRLOpen = !isRLOpen;
-                        isIOTOpen = false;
-                        isWebOpen = false;
-                        isInternOpen = false;
-                    } else if (layerName.includes("IOTLayer")) {
-                        isVROpen = false;
-                        isRLOpen = false;
+                        break;
+                    case "IOTLayer":
                         isIOTOpen = !isIOTOpen;
-                        isWebOpen = false;
-                        isInternOpen = false;
-                    } else if (layerName.includes("WEBLayer")) {
-                        isVROpen = false;
-                        isRLOpen = false;
-                        isIOTOpen = false;
+                        break;
+                    case "WEBLayer":
                         isWebOpen = !isWebOpen;
-                        isInternOpen = false;
-                    } else if (layerName.includes("INTERNLayer")) {
-                        isVROpen = false;
-                        isRLOpen = false;
-                        isIOTOpen = false;
-                        isWebOpen = false;
+                        break;
+                    case "INTERNLayer":
                         isInternOpen = !isInternOpen;
-                    }
+                        break;
+                }
 
+                handleLayerClick(layerName);
+                fadeInElement(contactText);
+            });
 
-
-                    if (!isProjOpen) {
-                        // Animate welcomeHeader and welcomeText to slide left and become opaque
-                        welcomeHeader.style.transform = "translateX(-100%)";
-                        welcomeText.style.transform = "translateX(-100%)";
-                        welcomeHeader.style.opacity = "0";
-                        welcomeText.style.opacity = "0";
-                        welcomeDisplayOpen = false;
-
-                        fadeOutText(contactText)
-
-                        // Animate vrHeader and vrText to slide in from the left and become visible
-                        // Delay before resetting welcomeHeader and welcomeText
-                        setTimeout(function() {
-                            if (isVROpen) {
-                                for (const element in projectSections.vr) {
-                                    projectSections.vr[element].style.transform = "translateX(0)";
-                                    fadeInElement(projectSections.vr[element]); // Call the function to gradually fade in the text
-                                }
-                            } else if (isRLOpen) {
-                                for (const element in projectSections.rl) {
-                                    projectSections.rl[element].style.transform = "translateX(0)";
-                                    fadeInElement(projectSections.rl[element]); // Call the function to gradually fade in the text
-                                }
-                            } else if (isIOTOpen) {
-                                for (const element in projectSections.iot) {
-                                    projectSections.iot[element].style.transform = "translateX(0)";
-                                    fadeInElement(projectSections.iot[element]); // Call the function to gradually fade in the text
-                                }
-                            } else if (isWebOpen) {
-                                for (const element in projectSections.web) {
-                                    projectSections.web[element].style.transform = "translateX(0)";
-                                    fadeInElement(projectSections.web[element]); // Call the function to gradually fade in the text
-                                }
-                            } else if (isInternOpen) {
-                                for (const element in projectSections.intern) {
-                                    projectSections.intern[element].style.transform = "translateX(0)";
-                                    fadeInElement(projectSections.intern[element]); // Call the function to gradually fade in the text
-                                }
-                            }
-
-
-                            fadeInElement(contactText)
-
-
-                            isProjOpen = !isProjOpen;
-                            lastClickedLayer = clickedLayer;
-
-
-
-                        }, 500); // Adjust this timeout as needed
-                    } else if (isProjOpen) {
-                        // Animate vrHeader and vrText to slide out to the left and become transparent
-                        // Animate vrHeader and vrText to slide out to the left and become transparent
-
-                        if (clickedLayer != lastClickedLayer) {
-
-                            welcomeDisplayOpen = false;
-
-                            if (lastClickedLayer.includes("VRLayer")) {
-                                for (const element in projectSections.vr) {
-                                    projectSections.vr[element].style.transform = "translateX(-100%)";
-                                    projectSections.vr[element].style.opacity = "0";
-                                }
-                            } else if (lastClickedLayer.includes("RLLayer")) {
-                                for (const element in projectSections.rl) {
-                                    projectSections.rl[element].style.transform = "translateX(-100%)";
-                                    projectSections.rl[element].style.opacity = "0";
-                                }
-                            } else if (lastClickedLayer.includes("IOTLayer")) {
-                                for (const element in projectSections.iot) {
-                                    projectSections.iot[element].style.transform = "translateX(-100%)";
-                                    projectSections.iot[element].style.opacity = "0";
-                                }
-                            } else if (lastClickedLayer.includes("WEBLayer")) {
-                                for (const element in projectSections.web) {
-                                    projectSections.web[element].style.transform = "translateX(-100%)";
-                                    projectSections.web[element].style.opacity = "0";
-                                }
-                            } else if (lastClickedLayer.includes("INTERNLayer")) {
-                                for (const element in projectSections.intern) {
-                                    projectSections.intern[element].style.transform = "translateX(-100%)";
-                                    projectSections.intern[element].style.opacity = "0";
-                                }
-                            }
-
-
-                            // Delay before resetting welcomeHeader and welcomeText
-                            setTimeout(function() {
-                                if (clickedLayer.includes("VRLayer")) {
-                                    for (const element in projectSections.vr) {
-                                        projectSections.vr[element].style.transform = "translateX(0)";
-                                        fadeInElement(projectSections.vr[element]); // Call the function to gradually fade in the text
-                                    }
-                                } else if (clickedLayer.includes("RLLayer")) {
-                                    for (const element in projectSections.rl) {
-                                        projectSections.rl[element].style.transform = "translateX(0)";
-                                        fadeInElement(projectSections.rl[element]); // Call the function to gradually fade in the text
-                                    }
-                                } else if (clickedLayer.includes("IOTLayer")) {
-                                    for (const element in projectSections.iot) {
-                                        projectSections.iot[element].style.transform = "translateX(0)";
-                                        fadeInElement(projectSections.iot[element]); // Call the function to gradually fade in the text
-                                    }
-                                } else if (clickedLayer.includes("WEBLayer")) {
-                                    for (const element in projectSections.web) {
-                                        projectSections.web[element].style.transform = "translateX(0)";
-                                        fadeInElement(projectSections.web[element]); // Call the function to gradually fade in the text
-                                    }
-                                } else if (clickedLayer.includes("INTERNLayer")) {
-                                    for (const element in projectSections.intern) {
-                                        projectSections.intern[element].style.transform = "translateX(0)";
-                                        fadeInElement(projectSections.intern[element]); // Call the function to gradually fade in the text
-                                    }
-                                }
-
-                                lastClickedLayer = clickedLayer;
-                                fadeInElement(contactText);
-                            }, 500); // Adjust this timeout as needed
-
-                        } else if (clickedLayer == lastClickedLayer) {
-                            if (clickedLayer.includes("VRLayer")) {
-                                for (const element in projectSections.vr) {
-                                    projectSections.vr[element].style.transform = "translateX(-100%)";
-                                    projectSections.vr[element].style.opacity = "0";
-                                }
-                                isVROpen = false;
-                            } else if (clickedLayer.includes("RLLayer")) {
-                                for (const element in projectSections.rl) {
-                                    projectSections.rl[element].style.transform = "translateX(-100%)";
-                                    projectSections.rl[element].style.opacity = "0";
-                                }
-                                isRLOpen = false;
-                            } else if (clickedLayer.includes("IOTLayer")) {
-                                for (const element in projectSections.iot) {
-                                    projectSections.iot[element].style.transform = "translateX(-100%)";
-                                    projectSections.iot[element].style.opacity = "0";
-                                }
-                                isIOTOpen = false;
-                            } else if (clickedLayer.includes("WEBLayer")) {
-                                for (const element in projectSections.web) {
-                                    projectSections.web[element].style.transform = "translateX(-100%)";
-                                    projectSections.web[element].style.opacity = "0";
-                                }
-                                isWebOpen = false;
-                            } else if (clickedLayer.includes("INTERNLayer")) {
-                                for (const element in projectSections.intern) {
-                                    projectSections.intern[element].style.transform = "translateX(-100%)";
-                                    projectSections.intern[element].style.opacity = "0";
-                                }
-                                isInternOpen = false;
-                            }
-
-
-                            // Delay before resetting welcomeHeader and welcomeText
-                            setTimeout(function() {
-                                // Reset welcomeHeader and welcomeText to their initial state
-                                welcomeHeader.style.transform = "translateX(0%)";
-                                welcomeText.style.transform = "translateX(0%)";
-
-
-
-                                fadeInElement(welcomeHeader, welcomeText); // Call the function to gradually fade in the text
-
-
-                                fadeInElement(contactText);
-                                welcomeDisplayOpen = true;
-                                isProjOpen = !isProjOpen;
-
-                            }, 500); // Adjust this timeout as needed
-                        }
-
-                        fadeOutText(contactText)
-
-                    }
-
-
-
-                    // Toggle the state
-
-
-                    // Delay changing the display property
-                    setTimeout(function() {
-                        welcomeHeader.style.display = welcomeDisplayOpen ? "block" : "none";
-                        welcomeText.style.display = welcomeDisplayOpen ? "block" : "none";
-
-                        // Initialize the display properties based on the initial state
-                        for (const element in projectSections.vr)
-                            projectSections.vr[element].style.display = isVROpen ? "block" : "none";
-                        for (const element in projectSections.rl)
-                            projectSections.rl[element].style.display = isRLOpen ? "block" : "none";
-                        for (const element in projectSections.iot)
-                            projectSections.iot[element].style.display = isIOTOpen ? "block" : "none";
-                        for (const element in projectSections.web)
-                            projectSections.web[element].style.display = isWebOpen ? "block" : "none";
-                        for (const element in projectSections.intern)
-                            projectSections.intern[element].style.display = isInternOpen ? "block" : "none";
-                    }, 500); // Adjust this timeout to match your animation duration
-                });
             }
 
+
+            // Delay changing the display property
+            setTimeout(function() {
+                welcomeHeader.style.display = welcomeDisplayOpen ? "block" : "none";
+                welcomeText.style.display = welcomeDisplayOpen ? "block" : "none";
+
+                // Initialize the display properties based on the initial state
+                toggleProjectSections(projectSections.vr, isVROpen)
+                toggleProjectSections(projectSections.rl, isRLOpen)
+                toggleProjectSections(projectSections.iot, isIOTOpen)
+                toggleProjectSections(projectSections.web, isWebOpen)
+                toggleProjectSections(projectSections.intern, isInternOpen)
+            }, 0); // Adjust this timeout to match your animation duration
         });
 
     </script>
