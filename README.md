@@ -6,4 +6,4 @@ I programmed this project myself, and it consists entirely of front-end elements
 
 The video below is a demo of the website in its current state. Eventually, there will also be a link here that will take you to the website, once I have enough money to host it online.
 
-[![Watch the video](https://i.imgur.com/D1af6Bt.png)](https://drive.google.com/file/d/1N0DtJJahy3Ntht6sfjVThK5GV5gOJvks/view?usp=sharing)
+[![Watch the video](https://i.imgur.com/D1af6Bt.png)](https://drive.google.com/file/d/1aABWZqIeppQzaPwl-UDYHyKRg0R0uAQQ/view?usp=sharing)
