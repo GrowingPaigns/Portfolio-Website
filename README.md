@@ -1,7 +1,17 @@
-# Portfolio-Website
+# Portfolio Website
 
 This repository holds recently completed code for my portfolio website.
  It consists entirely of front-end elements, as I do not need a database to host images/videos at this point in time.
+
+This website, for reference, can be found at the following link:
+
+<link rel="stylesheet" type="text/css" href="mkdStyles.css">
+
+<p class="centered-link">
+  <a href="https://discord.gg/hrmABPN4wS">
+    GrowingPaigns Portfolio Website
+  </a>
+</p>
 
 _The languages used in this project are..._
 
