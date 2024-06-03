@@ -5,10 +5,8 @@ This repository holds recently completed code for my portfolio website.
 
 This website, for reference, can be found at the following link:
 
-<link rel="stylesheet" type="text/css" href="mkdStyles.css">
-
-<p class="centered-link">
-  <a href="https://discord.gg/hrmABPN4wS">
+<p align="center" style="font-size: 1.5em; font-weight: bold;">
+  <a href="https://discord.gg/hrmABPN4wS" style="text-decoration: none; color: #7289da;">
     GrowingPaigns Portfolio Website
   </a>
 </p>
