@@ -21,7 +21,7 @@ _The languages used in this project are..._
       </a>
     </td>
     <td align="left">
-      HTML as the base, as 95% of websites use HTML for their base and there's a wealth of knowledge about it
+      HTML as 95% of websites use HTML for their base and there's a wealth of knowledge about it
     </td>
   </tr>
   <tr>
@@ -31,7 +31,7 @@ _The languages used in this project are..._
       </a>
     </td>
     <td align="left">
-      CSS to style text, buttons, and to create hover animations/effects
+      CSS to help style text, buttons, and to create hover animations/effects
     </td>
   </tr>
   <tr>
@@ -41,7 +41,7 @@ _The languages used in this project are..._
       </a>
     </td>
     <td align="left">
-      JavaScript to create transitionary wipe animations for each project section, as well as implement some Q.O.L. features
+      JavaScript to create transitionary wipe animations for each project section
     </td>
   </tr>
 </table>
