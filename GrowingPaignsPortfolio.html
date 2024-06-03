@@ -1,0 +1,612 @@
+<!DOCTYPE html>
+<html>
+
+<!--Interesting tips of note:
+    - pressing ctrl + b while selecting something will also select the next  
+      instace for easy re-naming 
+    -->
+
+<head>
+    <!--Set viewport width to equal device screen width, and set zoom to 1.0-->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GrowingPaigns - Home</title>
+    <!--appears on the actual tab-->
+
+    <link rel="stylesheet" href="GrowingPaignsPortfolioStylings.css">
+
+    <!--Font data taken from fonts.google.com-->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <!--<link href="https://fonts.googleapis.com/css2?family=Roboto+Condensed:wght@300;400;700&display=swap" rel="stylesheet">-->
+
+    <link href="https://fonts.googleapis.com/css2?family=Brandon+Grotesque:wght@300;400;700&family=Open+Sans&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css">
+
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+
+
+    <!--https://fontawesome.com/v4/icons/ Find Icons Here-->
+
+</head>
+
+<body>
+    <section class="main-page">
+        <div class="main-section">
+            <div class="nav-bar">
+            </div>
+
+            <div class="content">
+
+
+                <div class="column-holder">
+
+
+                    <div class="project-columns">
+                        <video autoplay loop muted poster="Images/Videos/VR%20Illusions.mp4">
+                            <source src="Images/Videos/VR%20Illusions.mp4" type="video/mp4">
+                            Your browser does not support the video tag.
+                        </video>
+                        <div class="layer" data-layer-name="VRLayer">
+                            <div class="VRLayer" data-target="textHolder"></div>
+                            <h3>Optical Illusions</h3>
+                        </div>
+                    </div>
+                    <div class="project-columns">
+                        <video autoplay loop muted poster="Images/Videos/CountDownPoster.mp4">
+                            <source src="Images/Videos/CountDownPoster.mp4" type="video/mp4">
+                            Your browser does not support the video tag.
+                        </video>
+                        <div class="layer" data-layer-name="CDLayer">
+                            <div class="CDLayer" data-target="textHolder"></div>
+                            <h3>Tower-Defense</h3>
+                        </div>
+                    </div>
+                    <div class="project-columns">
+                        <video autoplay loop muted poster="Images/Videos/menu-project.mp4">
+                            <source src="Images/Videos/menu-project.mp4" type="video/mp4">
+                            Your browser does not support the video tag.
+                        </video>
+                        <div class="layer" data-layer-name="RLLayer">
+                            <div class="RLLayer" data-target="textHolder"></div>
+                            <h3>Roguelite Platformer</h3>
+                        </div>
+                    </div>
+                    <div class="project-columns">
+                        <video autoplay loop muted poster="Images/Videos/SpaceInvadersGame.mp4">
+                            <source src="Images/Videos/SpaceInvadersGame.mp4" type="video/mp4">
+                            Your browser does not support the video tag.
+                        </video>
+                        <div class="layer" data-layer-name="IOTLayer">
+                            <div class="IOTLayer" data-target="textHolder"></div>
+                            <h3>"IOT" Prototype</h3>
+                        </div>
+                    </div>
+                    <div class="project-columns">
+                        <video autoplay loop muted poster="Images/Videos/WebVid.mp4">
+                            <source src="Images/Videos/WebVid.mp4" type="video/mp4">
+                            Your browser does not support the video tag.
+                        </video>
+                        <div class="layer" data-layer-name="WEBLayer">
+                            <div class="WEBLayer" data-target="textHolder"></div>
+                            <h3>This Website</h3>
+                        </div>
+                    </div>
+                    <div class="project-columns">
+                        <video autoplay loop muted poster="Images/Videos/ML.mp4">
+                            <source src="Images/Videos/ML.mp4" type="video/mp4">
+                            Your browser does not support the video tag.
+                        </video>
+                        <div class="layer" data-layer-name="INTERNLayer">
+                            <div class="INTERNLayer" data-target="textHolder"></div>
+                            <h3>2023 Internship</h3>
+                        </div>
+                    </div>
+
+
+                </div>
+
+                <div class="text-holder" id="textHolder">
+                    <h1 id="welcomeHeader">Samuel Hilfer</h1>
+                    <p id="welcomeTitleText"><span class="italic">Game/Web Developer</span></p>
+                    <p id="welcomeBodyText">
+                        Some of my recent projects featuring VR/2D/3D Unity Gameplay, Web developments, and IOT experiments can be found above. <br><br>Feel free to reach out to my socials found at the bottom of the page with any questions you may have.
+                    </p>
+
+                    <h1 id="vrHeader">A Different Perspective On Illusions</h1>
+                    <div class="icons" id="vrIcons">
+
+                        <a href="https://github.com/GrowingPaigns/VR-Illusion-Puzzle-Game"><i class="fab fa-github icon-scale"></i></a>
+
+                    </div>
+                    <p id="vrText">
+                        In my third year of college, I took an AR/VR development course at my university. As a result of this course, I wound up developing a prototype for a VR optical-illusion game. Below is a demo video I made to showcase this prototype.<br><br>
+                    </p>
+                    <div class="video-container">
+                        <video width="100%" height="420px" controls id="vrVid">
+                            <source src="Images/Videos/VRShowcase.mp4" loading="lazy">
+                        </video>
+                    </div>
+                    <h2 id="vrSumHeader">
+                        The summarized form of the mechanic is this:<br>
+                    </h2>
+                    <p id="vrSummary">
+                        <br>There are two raycasts sent out from the center of the player's headset.
+
+                        <br><br>One identifies objects that can be interacted with. This raycast is responsible for "picking up" the aimed at object while also gathering all transform elements/variables of the object <span class="italic">(scale, position, orientation)</span> the moment the player presses the "grab" button.
+
+                        <br><br>The other raycast <span class="italic">(named "targetForTakenObj")</span> ignores all interactable objects and passes through them to detect the boundary of the surrounding environment in-front of the player.
+
+                        <br><br>The "picked up" object then has its position changed to the position of "targetForTakenObj" <span class="italic">(i.e. it is made a child object of the player's "crosshair" at the distance it was from the player when they picked it up)</span>. This all occurs the first moment (frame) after the player presses the grab button. From the second frame onward, as the player looks around the room, the position of the object will continually update as we try to place the object flush against the surface our second ray is aiming at (against the boundary of the room).
+
+                        <br><br> In order to create the illusion where the object scales up the further it gets from the player while seeming to remain the same size in the player's "hands". . . We first have to gather the current distance between the player's headset, and the object we picked up at its current, updated position. <br><br>
+
+                        <span class="italic-center">objectDist = Vector3.Distance(mainCamera.position, takenObject.position);</span>
+
+                        <br>We can divide that distance by the initial distance between the camera and the object, which we recorded "right before it was picked up", in order to calculate how much we need to scale up our object by.
+
+                        <br><br><span class="italic-center">(objectDist/originalDistance) = updatedScale</span>
+
+                        <br>By then multiplying the original "local-scale" transform of the object by the updatedScale calculation, we can achieve the effect of making an object physically larger or smaller while appearing to remain the same size in the player's "hands".<br><br>
+
+                        Of course, thats not all there is to it, the actual calculations are more complex upon implementation, but this is my best attempt to summarize them.<br><br>
+                    </p>
+
+                    <h1 id="countDownHeader">Counting Down the Days</h1>
+                    
+                    <div class="icons" id="countDownIcons">
+                        <a href="https://store.steampowered.com/app/2794640/CountDown/"><i class="fab fa-steam-square"></i></a>
+                    </div>
+                    
+                    <p id="countDownText">
+                        I had an idea for a fun, casual tower-defense game, which I could also use as a testing ground for mechanics I wanted to implement into my roguelite game. Before long, this small project became a highly involved process, and grew into something I plan to develop over the coming year. With only a few tasks left to complete, I expect an early Q2 2024 release for version 0.1.<br><br> It took me almost 7 months to complete a demo for this product while creating all the assets on my own. I deem this version 0.05 (out now on Steam - click the link above!). Version 0.1 is coming along quickly though, I recently finalized an additional game mode for the title.
+                    </p>
+                    <div class="video-container">
+                        <video width="100%" height="420px" controls id="countDownVid">
+                            <source src="Images/Videos/CountDownDemo.mp4" loading="lazy">
+                        </video>
+                    </div>
+
+                    <h1 id="rlHeader">A "Rogue" Experience</h1>
+                    <div class="icons" id="rlIcons">
+
+                        <a href="https://github.com/GrowingPaigns/Unity-2D-Platformer-Prototype"><i class="fab fa-github icon-scale"></i></a>
+
+                    </div>
+                    <p id="rlText">
+                        Throughout my years of playing games, there have always been a few genres that immediately pique my interest when I see new title releases. Games that utilize either the Rogue<span class="italic">lite</span>, or Rogue-<span class="italic">like</span> genres <span class="italic">(or in many cases, utilize both)</span> always intrigue me, regardless of their actual gameplay.<br><br>
+
+                        So after gathering a general understanding of Unity, I decided to start pursuing my dream project. I knew it would be a long arduous progress that I would wind up changing many times over. But I also knew I'd never get anywhere if I didn't try.<br><br>
+
+                        So I began creating with a general concept in mind, exploring anything I thought would be interesting, and wound up with the prototype below. <br><br>
+                    </p>
+                    <div class="video-container">
+                        <video width="100%" height="420px" controls id="rlVid">
+                            <source src="Images/Videos/ProcGen.mp4" loading="lazy">
+                        </video>
+                    </div>
+                    <p id="rlText2">
+                        <br>It was a top-down prototype, which generated levels using a "block" system, matching up the openings in each pre-made section to create a path through the level grid. This level generation method is the same type that games like "Spelunky" use. There was nothing fun about it, but it got me interested in developing, and led me to my next version. I wound up not liking the block system generation, the level structure didn't feel natural, even after filling in the blocks with points of interest. Thereby, I decided to recreate the system and learn a bit about how to utilize Random Walk and Binary Space Partitioning algorithms in Unity in the process. <br><br>
+                    </p>
+                    <div class="video-container">
+                        <video width="100%" height="420px" controls id="rlVid2">
+                            <source src="Images/Videos/RLVideo.mp4" loading="lazy">
+                        </video>
+                    </div>
+                    <p id="rlText3">
+                        <br> Again however, it felt generic. I enjoyed the process of drawing new art, and playing with new mechanics, but the experience felt stale overall, and I didn't have many good ideas to move forward with or even a solid design structure to act on. In large part, I was winging the development of this project up until this point. It was around this time when I met a like-minded developer who was equally excited about the idea of developing a game. I pitched them the general idea for the project I had been working on, and we began planning out the process together. This structure, combined with the addition of an interested party caused the project to begin taking shape quicker than any attempts prior. After a few months, the prototype below was functional, and I was still just as excited about pursuing this version of the project as I was when I first began.<br><br>
+                    </p>
+                    <div class="video-container">
+                        <video width="100%" height="420px" controls id="rlVid3">
+                            <source src="Images/Videos/RLDemoOld.mp4">
+                        </video>
+                    </div>
+                    <p id="rlText4">
+                        <br> However, after then unexpectedly running into physics issues, I had to completely rework the project, building a custom velocity-based physics system to handle ramp and moving platform interactions. In doing so, all interactions felt smoother, and the project reached the state you see below.<br><br>
+                    </p>
+                    <div class="video-container">
+                        <video width="100%" height="420px" controls id="rlVid4">
+                            <source src="Images/Videos/RLDemo.mp4">
+                        </video>
+                    </div>
+
+                    <h1 id="iotHeader">IOT: Innovating Our Tomorrow</h1>
+                    <div class="icons" id="iotIcons">
+
+                        <a href="https://github.com/GrowingPaigns/Space-Invaders-IOT-Project"><i class="fab fa-github icon-scale"></i></a>
+
+                    </div>
+                    <table id="iotTable">
+                        <tr>
+                            <td>Total Time Spent on Code:</td>
+                            <td>13-15 hrs</td>
+                        </tr>
+                        <tr>
+                            <td>Circuit Systems Construction:</td>
+                            <td>4 hrs</td>
+                        </tr>
+                        <tr>
+                            <td>"Game Cabinet" Construction:</td>
+                            <td>10-12 hrs</td>
+                        </tr>
+                    </table>
+                    <p id="iotText">
+                        <br>In my Junior year of college, I took a University course that served as an intro to physical systems engineering. In this course, I worked with a team on projects such as a pedometer, gesture sensing unit, and a battery percentage calculator using an "Arduino Uno" and self-constructed circuits.<br><br>What our team was most proud of, however, was the final project we created. We were given complete freedom to build any sort of IOT-based physical project. What we came up with was constructing this mock <span class="italic">"classic game cabinet"</span> which you can see in action below.<br><br>
+                    </p>
+                    <div class="video-container">
+                        <video width="100%" height="420px" controls id="iotVid">
+                            <source src="Images/Videos/SpaceInvadersGame.mp4" loading="lazy">
+                        </video>
+                    </div>
+
+                    <h1 id="webHeader">Webbed Up</h1>
+                    <div class="icons" id="webIcons">
+
+                        <a href="https://github.com/GrowingPaigns/Portfolio-Website"><i class="fab fa-github icon-scale"></i></a>
+
+                    </div>
+                    <p id="webText">
+
+
+                        This website itself is also one of my individual projects! After having graduated with a Computer Science degree program, I have come to realize that I truly love the creative aspects of this field. Meanwhile, a lot of the more complex subjects, such as security implementation, I find hard to fully understand, or simply disinterest me. For these reasons <span class="italic">(and the desire/need to have a public portfolio)</span>, I decided to learn how to build my own website from scratch.<br><br>
+
+                        This web page was constructed using a mix of the three languages listed below, JavaScript, HTML, and CSS.<br>
+                    </p>
+                    <div class="icons" id="webIcons2">
+
+                        <a href="https://en.wikipedia.org/wiki/JavaScript"><i class="fab fa-js icon-scale"></i></a>
+                        <a href="https://en.wikipedia.org/wiki/HTML"><i class="fab fa-html5 icon-scale"></i></a>
+                        <a href="https://en.wikipedia.org/wiki/CSS"><i class="fab fa-css3-alt icon-scale"></i></a>
+
+                    </div>
+                    <p id="webText2">
+                        While this page mainly serves as a proof of concept for my web design skills, as well as a public portfolio for my projects, I plan to keep iterating upon this design in the future. I plan on adding an email contact form so that visitors like yourself can reach-out directly from the site. I also plan on integrating a database, not only to handle all of the media on this site, but also to handle merchandise I may eventually make that relates to the game I am building.
+                    </p>
+
+                    <h1 id="internHeader">An Amazing Experience</h1>
+                    <p id="internText">
+                        Over summer <span class="italic">(June-Aug, 2023)</span> I acted as a <span class="bold">UI/UX Development and World Building</span> intern at Castix LLC. In this role, I began by implementing a client-chat feature, and some quality of life chat additions for the company's upcoming MMO title.
+
+                        <br><br>This task required I utilize Unity's TextMeshPro components, and related pseudo-HTML stylings, in order to detect when a URL gets posted to the established chat system. After detecting the URL, I had to set up a security feature which would either mark a link as "Whitelisted", "Blacklisted", or "Unlisted".
+                    </p>
+                    <p id="internText1">
+                        <span class="italic"><br>A <span class="bold">whitelisted</span> URL would appear as a user normally expects. Underlined/blue in color, and it would navigate the user to the related website after being clicked on. In relation to this specific type of link, I was also tasked with creating a pop-up graphic that asked the user to confirm if they actually wanted to navigate away from the game, to the page. This graphic would further give the user the option to add the URL to their <span class="bold">"personal-whitelist"</span> before navigating, so that the confirmation window will no longer pop up in the future, making the user automatically navigate to the related page.
+                        </span>
+                    </p>
+                    <div class="image-container" id="imageContainer">
+                        <img src="Images/whitelisted.PNG" loading="lazy">
+                        <img src="Images/navWarn.png" loading="lazy">
+                    </div>
+                    <p id="internText2">
+                        <span class="italic">An <span class="bold">unlisted</span> URL simply gets underlined, but remains white in color, and cannot be interacted with.
+                        </span>
+                    </p>
+                    <div class="image-container" id="imageContainer2">
+                        <img src="Images/unwhitelisted.PNG" loading="lazy">
+                    </div>
+                    <p id="internText3">
+                        <span class="italic">A <span class="bold">blacklisted</span> URL never gets sent to the chat, and the user gets a server message telling them that blacklisted URLs cannot be posted.
+                        </span>
+                    </p>
+                    <div class="image-container" id="imageContainer3">
+                        <img src="Images/blacklisted.PNG" loading="lazy">
+                    </div>
+                    <p id="internText4">
+                        <br>Beyond this, while completing the above task, I also implemented a "character counter" in the chat that restricted a player's message to 160 characters in length. This led to the need to also add a few other quality of life features like, shortening the names of links that can be clicked on, detecting and countering chat spam, or being able to disable the visual for said character counter.
+                    </p>
+                    <div class="image-container" id="imageContainer4">
+                        <img src="Images/catlink.PNG" loading="lazy">
+                        <img src="Images/spam.PNG" loading="lazy">
+                        <img src="Images/wordcount.PNG" loading="lazy">
+                    </div>
+                    <p id="internText5">
+                        After I completed my Unity development tasks, I was also responsible for building a captivating 3D desert landscape map. I was given limited lore/design direction requrements from the stakeholders, and excercised full creative control in developing the extent of the map. I produced extravagant, and twisting mountain passages, a war torn capitol of the past that has begun to be reclaimed by the ocean, and a bustling, lively nomad village, to name just a few elements. Each of the nomad tents can be entered and have unique, hand-crafted interiors. There are also other secrets around the map like hidden mountain passages, and an island with treasure that has a scenic view of the nearby ship graveyard.
+                    </p>
+                    <div class="image-container" id="imageContainer5">
+                        <img src="Images/mountains1.PNG" loading="lazy">
+                        <img src="Images/castle1.PNG" loading="lazy">
+                        <img src="Images/nomad1.PNG" loading="lazy">
+                        <img src="Images/nomad2.PNG" loading="lazy">
+                        <img src="Images/nomad3.PNG" loading="lazy">
+                    </div>
+
+                </div>
+
+
+
+            </div>
+        </div>
+
+
+        <div class="nav-bar-bottom">
+            <div class="contact-info">
+                <p><i class="fa fa-envelope"></i> samuelhilfer@gmail.com <br><i class="fa fa-phone"></i> +1(303)-362-1313 <br><i class="fa fa-home"></i> Golden, CO, US<br><br></p>
+            </div>
+
+            <div class="resume">
+                <a href="https://github.com/GrowingPaigns/GrowingPaigns.github.io/blob/main/Samuel%20Hilfer%20-%20Resume.pdf"><i class="fa fa-file icon-scale"></i></a>
+            </div>
+            <div class="icons">
+                <a href="https://github.com/GrowingPaigns">
+                    <button class="github-btn">
+                        <svg class="github-logo" viewBox="0 0 24 24" height="24" width="24" xmlns="http://www.w3.org/2000/svg">
+                            <path fill="#f44336" d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"></path>
+                        </svg>
+                    </button>
+
+
+                </a>
+                <a href="https://www.linkedin.com/in/samuel-hilfer/"><i class="fa fa-linkedin-square icon-scale"></i></a>
+                <a href="https://app.joinhandshake.com/stu/users/20062882"><i class="fa fa-handshake-o icon-scale"></i></a>
+                <a href="https://www.instagram.com/growingpaigns/?hl=en"><i class="fa fa-instagram icon-scale"></i></a>
+            </div>
+        </div>
+
+    </section>
+
+    <!------------------------JavaScript for Toggle Menu---------------------->
+
+
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+            // Check screen size on window resize
+            document.querySelectorAll('.project-columns video').forEach(video => {
+                video.addEventListener('play', function() {
+                    setTimeout(() => {
+                        if (window.innerWidth < 1290) {
+                            video.pause();
+                        }
+                            
+                    }, 10); // Adjust the delay (in milliseconds) as needed
+                });
+            });
+
+            const layers = [
+                document.querySelector(".project-columns:nth-child(1) .layer"),
+                document.querySelector(".project-columns:nth-child(2) .layer"),
+                document.querySelector(".project-columns:nth-child(3) .layer"),
+                document.querySelector(".project-columns:nth-child(4) .layer"),
+                document.querySelector(".project-columns:nth-child(5) .layer"),
+                document.querySelector(".project-columns:nth-child(6) .layer")
+            ];
+
+            const welcomeHeader = document.getElementById("welcomeHeader");
+            const welcomeTitleText = document.getElementById("welcomeTitleText");
+            const welcomeBodyText = document.getElementById("welcomeBodyText");
+
+            const projectSections = {
+                vr: document.querySelectorAll("#vrHeader, #vrText, #vrSumHeader, #vrSummary, #vrVid, #vrIcons"),
+                countdown: document.querySelectorAll("#countDownHeader, #countDownText, #countDownVid, #countDownIcons"),
+                rl: document.querySelectorAll("#rlHeader, #rlText, #rlHeader2, #rlText2, #rlText3, #rlText4, #rlVid, #rlVid2, #rlVid3, #rlVid4, #rlIcons"),
+                iot: document.querySelectorAll("#iotHeader, #iotText, #iotHeader2, #iotText2, #iotHeader3, #iotText3, #iotVid, #iotTable, #iotIcons"),
+                web: document.querySelectorAll("#webHeader, #webText, #webText2, #webIcons, #webIcons2"),
+                intern: document.querySelectorAll("#internHeader, #internText, #internText1, #internText2, #internText3, #internText4, #internText5, #imageContainer, #imageContainer2, #imageContainer3, #imageContainer4, #imageContainer5")
+            };
+
+            // Get all project columns
+            const projectColumns = document.querySelectorAll('.project-columns');
+
+            let isProjOpen = false;
+            let isVROpen = false;
+            let isCDOpen = false;
+            let isRLOpen = false;
+            let isIOTOpen = false;
+            let isWebOpen = false;
+            let isInternOpen = false;
+
+            let enableScrollEvent = true;
+            let welcomeDisplayOpen = true;
+
+            let clickedLayer = "";
+            let lastClickedLayer = "";
+
+            // Loop through each project column
+            projectColumns.forEach((column, index) => {
+                column.addEventListener('mouseenter', handleColumnHover.bind(null, index));
+                column.addEventListener('mouseleave', resetColumns);
+            });
+
+
+
+            function handleColumnHover(index) {
+                projectColumns.forEach((col, i) => {
+                    if (i !== index) {
+                        const scaleFactor = Math.abs(i - index) * 0.1;
+                        col.classList.add('small');
+                        col.style.transform = `scale(${1 - scaleFactor})`;
+                    }
+                });
+            }
+
+            function resetColumns() {
+                projectColumns.forEach((col) => {
+                    col.classList.remove('small');
+                    col.style.transform = 'scale(1)';
+                });
+            }
+
+            // Function to gradually increase opacity
+            function fadeInElement(...elements) {
+                let opacity = 0;
+                const interval = setInterval(function() {
+                    if (opacity >= 1) {
+                        clearInterval(interval);
+                    } else {
+                        opacity += 0.1; // Adjust the increment value as needed
+                        elements.forEach((element) => {
+                            if (element) {
+                                element.style.opacity = opacity;
+                                element.style.display = "block";
+                            }
+                        });
+                    }
+                }, 10); // Adjust the interval duration as needed
+            }
+
+            function toggleProjectSections(projectSection, isOpen) {
+                if (projectSection) {
+
+                    projectSection.forEach((element) => {
+                        if (element) {
+                            element.style.transform = isOpen ? "translateX(0)" : "translateX(-100%)";
+                            if (isOpen) {
+                                element.style.display = isOpen ? "block" : "none";
+                                fadeInElement(element);
+                            } else {
+                                element.style.opacity = "0";
+                                setTimeout(function() {
+                                    element.style.display = isOpen ? "block" : "none";
+                                }, 500);
+                            }
+
+
+                        }
+                    });
+                }
+            }
+
+            function handleLayerClick(layerName) {
+
+                console.log("Layer Name to Open: " + layerName);
+                const sectionToToggle = {
+                    "VRLayer": projectSections.vr,
+                    "CDLayer": projectSections.countdown,
+                    "RLLayer": projectSections.rl,
+                    "IOTLayer": projectSections.iot,
+                    "WEBLayer": projectSections.web,
+                    "INTERNLayer": projectSections.intern,
+                };
+
+                if (!isProjOpen) {
+                    // Disable pointer events
+                    document.body.classList.add('disable-pointer-events');
+                    
+                    // Animate welcomeHeader and welcomeText to slide left and become opaque
+                    welcomeHeader.style.transform = "translateX(-100%)";
+                    welcomeTitleText.style.transform = "translateX(-100%)";
+                    welcomeBodyText.style.transform = "translateX(-100%)";
+                    welcomeHeader.style.opacity = "0";
+                    welcomeTitleText.style.opacity = "0";
+                    welcomeBodyText.style.opacity = "0";
+
+                    welcomeDisplayOpen = false;
+
+                    setTimeout(function() {
+
+                        welcomeHeader.style.display = welcomeDisplayOpen ? "block" : "none";
+                        welcomeTitleText.style.display = welcomeDisplayOpen ? "block" : "none";
+                        welcomeBodyText.style.display = welcomeDisplayOpen ? "block" : "none";
+                        toggleProjectSections(sectionToToggle[layerName], true);
+                        isProjOpen = !isProjOpen;
+                        lastClickedLayer = layerName;
+                        document.body.classList.remove('disable-pointer-events');
+                    }, 500);
+                } else if (isProjOpen) {
+                    if (layerName != lastClickedLayer) {
+                        // Disable pointer events
+                        document.body.classList.add('disable-pointer-events');
+                        
+                        welcomeDisplayOpen = false;
+
+                        toggleProjectSections(sectionToToggle[lastClickedLayer], false);
+
+                        setTimeout(function() {
+                            toggleProjectSections(sectionToToggle[layerName], true);
+
+                            lastClickedLayer = layerName;
+                            // Re-enable pointer events
+                            document.body.classList.remove('disable-pointer-events');
+                        }, 500);
+                    } else if (layerName == lastClickedLayer) {
+                        
+                        // Disable pointer events
+                document.body.classList.add('disable-pointer-events');
+                        toggleProjectSections(sectionToToggle[layerName], false);
+                        isProjOpen = !isProjOpen;
+
+                        // Delay before resetting welcomeHeader and welcomeText
+                        setTimeout(function() {
+
+                            welcomeDisplayOpen = true;
+                            welcomeHeader.style.display = welcomeDisplayOpen ? "block" : "none";
+                            welcomeTitleText.style.display = welcomeDisplayOpen ? "block" : "none";
+                            welcomeBodyText.style.display = welcomeDisplayOpen ? "block" : "none";
+
+                            // Reset welcomeHeader and welcomeText to their initial state
+                            welcomeHeader.style.transform = "translateX(0%)";
+                            welcomeTitleText.style.transform = "translateX(0%)";
+                            welcomeBodyText.style.transform = "translateX(0%)";
+
+                            fadeInElement(welcomeTitleText, welcomeHeader, welcomeBodyText);
+
+                            document.body.classList.remove('disable-pointer-events');
+                        }, 500); // Adjust this timeout as needed
+                    }
+                }
+            }
+
+            // Initialize the display properties based on the initial state
+            toggleProjectSections(projectSections.vr, isVROpen)
+            toggleProjectSections(projectSections.rl, isRLOpen)
+            toggleProjectSections(projectSections.iot, isIOTOpen)
+            toggleProjectSections(projectSections.web, isWebOpen)
+            toggleProjectSections(projectSections.intern, isInternOpen)
+
+            welcomeHeader.style.display = welcomeDisplayOpen ? "block" : "none";
+            welcomeTitleText.style.display = welcomeDisplayOpen ? "block" : "none";
+            welcomeBodyText.style.display = welcomeDisplayOpen ? "block" : "none";
+
+
+            for (let i = 0; i < layers.length; i++) {
+                layers[i].addEventListener("click", function() {
+                    const layerName = layers[i].getAttribute("data-layer-name");
+                    console.log("Clicked ON: " + layerName);
+                    clickedLayer = layerName;
+
+
+                    switch (layerName) {
+                        case "VRLayer":
+                            isVROpen = !isVROpen;
+                            break;
+                        case "CDLayer":
+                            isCDOpen = !isCDOpen;
+                        case "RLLayer":
+                            isRLOpen = !isRLOpen;
+                            break;
+                        case "IOTLayer":
+                            isIOTOpen = !isIOTOpen;
+                            break;
+                        case "WEBLayer":
+                            isWebOpen = !isWebOpen;
+                            break;
+                        case "INTERNLayer":
+                            isInternOpen = !isInternOpen;
+                            break;
+                    }
+
+                    handleLayerClick(layerName);
+                });
+
+            }
+
+
+            // Delay changing the display property
+            setTimeout(function() {
+                welcomeHeader.style.display = welcomeDisplayOpen ? "block" : "none";
+                welcomeTitleText.style.display = welcomeDisplayOpen ? "block" : "none";
+                welcomeBodyText.style.display = welcomeDisplayOpen ? "block" : "none";
+
+                // Initialize the display properties based on the initial state
+                toggleProjectSections(projectSections.vr, isVROpen)
+                toggleProjectSections(projectSections.countdown, isCDOpen)
+                toggleProjectSections(projectSections.rl, isRLOpen)
+                toggleProjectSections(projectSections.iot, isIOTOpen)
+                toggleProjectSections(projectSections.web, isWebOpen)
+                toggleProjectSections(projectSections.intern, isInternOpen)
+            }, 0); // Adjust this timeout to match your animation duration
+        });
+
+    </script>
+</body>
+
+</html>
